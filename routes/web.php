@@ -74,3 +74,6 @@ Route::delete('/categoria/{id}', [categoriaController::class, 'destroy'])
 
 
 // --------------------- CATEGORIA ----------------------------------
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

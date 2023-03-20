@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-    </head>
-    <body>
+@extends('adminlte::page')
+
+@section('content')
+
     Produtos<br>
     <a href="{{ url('categoria/create') }}">CRIAR</a>
 
@@ -32,5 +30,4 @@
     @endforeach
 </table>
 
-    </body>
-</html>
+@endsection

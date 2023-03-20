@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <title>Laravel</title>
-    </head>
-    <body>
+@extends('adminlte::page')
+
+@section('content')
+
 
         {!! Form::open(['url' => 'categoria/' . $categoria->id, 'method' => 'put']) !!}
 
@@ -15,5 +12,4 @@
 
         {!! Form::close() !!}
 
-    </body>
-</html>
+@endsection
