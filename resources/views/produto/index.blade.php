@@ -3,7 +3,9 @@
 @section('content')
 
     Produtos<br>
+    @can('is_admin')
     <a href="{{ url('produto/create') }}">CRIAR</a>
+    @endcan
 
     @if (session('status'))
     <div class="alert alert-success">

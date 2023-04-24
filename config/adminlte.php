@@ -323,11 +323,13 @@ return [
             'text' => 'Categoria',
             'url'  => 'categoria',
             'icon' => 'fas fa-fw fa-user',
+            'can'  => 'is_admin',
         ],
         [
             'text' => 'Produto',
             'url'  => 'produto',
             'icon' => 'fas fa-fw fa-user',
+            'can'  => 'is_admin',
         ],
         [
             'text' => 'profile',
