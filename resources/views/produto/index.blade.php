@@ -13,6 +13,12 @@
     </div>
     @endif
 
+    <script>
+    function ConfirmDelete() {
+        return confirm('Tem certeza que deseja excluir este registro?');
+    }
+  </script>
+
     <table>
   <tr>
     <th>Categoria</th>
@@ -26,7 +32,7 @@
     <td>
       <a href="{{ url('produto/' . $value->id) }}">Visualizar</a>
       <a href="{{ url('produto/' . $value->id . '/edit') }}">Editar</a>
-      {!! Form::open(['url' => 'produto/' . $value->id, 'method' => 'delete']) !!}
+      {!! Form::open(['url' => 'produto/' . $value->id, 'method' => 'delete', 'onsubmit' => 'return ConfirmDelete()']) !!}
       {{ Form::submit('EXCLUIR') }}
       {!! Form::close() !!}
     </td>
